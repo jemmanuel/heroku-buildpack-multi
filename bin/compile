@@ -12,6 +12,8 @@ function indent() {
 
 unset GIT_DIR
 
+chmod +x $1/vendor/bin/*
+
 for BUILDPACK in $(cat $1/.buildpacks); do
   dir=$(mktemp -t buildpackXXXXX)
   rm -rf $dir
