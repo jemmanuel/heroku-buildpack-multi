@@ -62,3 +62,7 @@ if [ -e $1/last_pack_release.out ]; then
   echo "Using release configuration from last framework $framework:" | indent
   cat $1/last_pack_release.out | indent
 fi
+
+if [ -d $1/vendor/bin ]; then
+  chmod 755 $/vendor/bin/*
+fi
